@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.5%;
+  gap: 15px;
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .JSONDisplay {
+    max-width: 80vw;
+    min-width: 50vw;
+  }
+}
