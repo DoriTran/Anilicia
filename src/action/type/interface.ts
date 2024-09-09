@@ -177,8 +177,46 @@ export interface Genre {
   count: number;
 }
 
+export interface Season {
+  year: number;
+  seasons: string[];
+}
+
 export interface Pagination {
   last_visible_page: number;
   has_next_page: boolean;
   items?: PaginationItems;
+}
+
+export interface SearchParams {
+  letter?: string;
+
+  type?: "tv" | "movie" | "ova" | "special" | "ona" | "music" | "cm" | "pv" | "tv_special";
+  status?: "airing" | "complete" | "upcoming";
+  rating?: "g" | "pg" | "pg13" | "r17" | "r" | "rx";
+  order_by?:
+    | "mal_id"
+    | "title"
+    | "start_date"
+    | "end_date"
+    | "episodes"
+    | "score"
+    | "scored_by"
+    | "rank"
+    | "popularity"
+    | "members"
+    | "favorites";
+  sort?: "desc" | "asc";
+  sfw?: boolean;
+
+  start_date?: string; // YYYY-MM-DD - e.g 2022, 2005-05, 2005-01-01
+  end_date?: string; // YYYY-MM-DD - e.g 2022, 2005-05, 2005-01-01
+
+  genres?: string; // 1,2,3
+  genres_exclude?: string; // 1,2,3
+}
+
+export interface SeasonParams {
+  year: number;
+  season: string;
 }

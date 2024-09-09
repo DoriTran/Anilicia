@@ -1,3 +1,14 @@
+export type WeekDay =
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday"
+  | "sunday"
+  | "unknown"
+  | "other";
+
 export type Image = {
   image_url: string;
   small_image_url?: string;

@@ -1,11 +1,10 @@
 import Paper from "@mui/material/Paper";
-import { getAnimeFullById } from "@/api/anime/anime";
+import { getAnimeFullById } from "@/action/type/anime";
 import styles from "./page.module.scss";
 import JSON from "./JSON";
 
 const TestPage = async () => {
   const response = await getAnimeFullById(1);
-  console.log(response);
 
   return (
     <div className={styles.page}>

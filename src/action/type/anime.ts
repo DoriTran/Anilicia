@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { animeTestId, http } from "../api";
+import { animeTestId, http } from "../api/api";
 import {
   Anime,
   AnimeDetail,
