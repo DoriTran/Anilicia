@@ -1,0 +1,10 @@
+@import "@/app/globals.scss";
+
+.fullScreen {
+  width: 100vw;
+  height: calc(100vh - $navbar);
+}
+
+.relative {
+  position: relative;
+}

@@ -1,0 +1,44 @@
+@import "@/app/globals.scss";
+
+.navbar {
+  height: $navbar;
+  @include flexRow;
+  justify-content: space-between;
+
+  .leftSide {
+    height: 100%;
+
+    .iconBrand {
+      @include flexRow;
+      justify-content: flex-start;
+      gap: 15px;
+      width: $sidebar;
+
+      .icon {
+        transition: transform 0.5s ease-in-out;
+        padding-left: 15px;
+      }
+
+      .brand {
+        font-family: $fontCurs;
+        font-size: $size40;
+      }
+    }
+
+    .navbarAction {
+      @include flexRow;
+      justify-content: flex-start;
+      gap: 15px;
+      padding-left: 10px;
+    }
+  }
+
+  .rightSide {
+    width: auto;
+    height: 100%;
+    border-top-left-radius: 50px;
+
+    @include flexRow;
+    gap: 5px;
+  }
+}
