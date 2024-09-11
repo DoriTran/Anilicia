@@ -14,9 +14,11 @@
       gap: 15px;
       width: $sidebar;
 
-      .icon {
+      .logo {
         transition: transform 0.5s ease-in-out;
         padding-left: 15px;
+        width: 2.5rem;
+        height: 2.5rem;
       }
 
       .brand {
@@ -37,6 +39,8 @@
     width: auto;
     height: 100%;
     border-top-left-radius: 50px;
+    background-color: var(--primary-dark);
+    color: var(--white);
 
     @include flexRow;
     gap: 5px;

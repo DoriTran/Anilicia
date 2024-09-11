@@ -11,7 +11,7 @@ import { FC } from "react";
 interface ApAvatarProps {
   alt?: string;
   src?: string;
-  size: number;
+  size: string;
   color?: string;
   border?: string;
   children?: React.ReactNode;
@@ -20,12 +20,7 @@ interface ApAvatarProps {
 
 const ApAvatar: FC<ApAvatarProps> = ({ alt, src, size, color, border, children, ...restProps }) => {
   return (
-    <Avatar
-      alt={alt}
-      src={src}
-      sx={{ width: `${size}px`, height: `${size}px`, bgcolor: color, border }}
-      {...restProps}
-    >
+    <Avatar alt={alt} src={src} sx={{ width: size, height: size, bgcolor: color, border }} {...restProps}>
       {children}
     </Avatar>
   );
