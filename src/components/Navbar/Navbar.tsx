@@ -2,6 +2,9 @@ import { faShuffle } from "@fortawesome/free-solid-svg-icons";
 import ApImage from "../ApImage/ApImage";
 import ApButton from "../ApButton/ApButton";
 import ApAvatar from "../ApAvatar/ApAvatar";
+import SearchBox from "./SearchBox/SearchBox";
+import LanguageSwitch from "./LanguageSwitch/LanguageSwitch";
+import ApTooltip from "../ApTooltip/ApTooltip";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
@@ -15,14 +18,16 @@ const Navbar = () => {
         <div className={styles.navbarAction}>
           <SearchBox />
           <LanguageSwitch />
-          <ApButton color="dark" endIcon={faShuffle}>
-            Random
-          </ApButton>
+          <ApTooltip tooltip="Find random anime" divWrapper>
+            <ApButton color="dark" endIcon={faShuffle}>
+              Random
+            </ApButton>
+          </ApTooltip>
         </div>
       </div>
       <div className={styles.rightSide}>
-        Log in
-        <ApAvatar src="/common/default avatar.png" size="2.5rem" color="white" />
+        <div className={styles.loginText}>Log in</div>
+        <ApAvatar src="/common/default avatar.png" size="2.5rem" color="white" className={styles.avatar} />
       </div>
     </div>
   );

@@ -4,9 +4,13 @@
   height: $navbar;
   @include flexRow;
   justify-content: space-between;
+  background-color: var(--white);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 
   .leftSide {
     height: 100%;
+    @include flexRow;
+    justify-content: flex-start;
 
     .iconBrand {
       @include flexRow;
@@ -16,14 +20,16 @@
 
       .logo {
         transition: transform 0.5s ease-in-out;
-        padding-left: 15px;
+        margin: 0 10px 0 15px;
         width: 2.5rem;
         height: 2.5rem;
+        cursor: pointer;
       }
 
       .brand {
         font-family: $fontCurs;
         font-size: $size40;
+        color: var(--primary-dark);
       }
     }
 
@@ -38,11 +44,22 @@
   .rightSide {
     width: auto;
     height: 100%;
+    padding: 0 15px 0 30px;
     border-top-left-radius: 50px;
     background-color: var(--primary-dark);
     color: var(--white);
+    font-size: $large;
 
     @include flexRow;
-    gap: 5px;
+    gap: 20px;
+
+    .loginText {
+      cursor: pointer;
+    }
+
+    .avatar {
+      cursor: pointer;
+      border: 1px solid var(--white);
+    }
   }
 }

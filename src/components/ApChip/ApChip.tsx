@@ -3,7 +3,6 @@
 import { Chip } from "@mui/material";
 import { FC, useEffect, useMemo, useState } from "react";
 import clsx from "clsx";
-import { themes } from "@/utils/themes";
 import styles from "./ApChip.module.scss";
 import { ApChipProps } from "./ChipInterface";
 import { ApIcon } from "..";
@@ -46,13 +45,6 @@ const ApChip: FC<ApChipProps> = ({
     onMouseLeave?.(event);
     setHover(false);
   };
-
-  // Style calculations
-  const iconColor = useMemo<string>(() => {
-    const contrastColor = color ? chipColors[color].dark : themes.color.primaryDark;
-    if (filled) return hover ? contrastColor : themes.color.priWhite;
-    return contrastColor;
-  }, [filled, color, hover]);
 
   // Hover handlers
   useEffect(() => {

@@ -1,0 +1,11 @@
+@import "@/app/globals.scss";
+
+.rootLayout {
+  background-color: var(--primary-dark);
+  position: relative;
+  z-index: 0;
+
+  .rootScrollbar {
+    max-height: calc(100vh - $navbar);
+  }
+}

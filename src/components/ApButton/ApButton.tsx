@@ -37,6 +37,7 @@ const ApButton: FC<ApButtonProps> = ({
 }) => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
+  console.log(buttonTheme[color].color);
   const btnProps = {
     ...(startIcon && {
       startIcon: <ApIcon icon={startIcon} size={iconProps?.size || "1.25rem"} {...iconProps} />,
@@ -48,7 +49,7 @@ const ApButton: FC<ApButtonProps> = ({
       backgroundColor: buttonTheme[color].color,
       color: buttonTheme[color].contrast,
       height: selected ? `calc(${btnHeight[height]} + 0.938rem)` : btnHeight[height],
-      fontSize: "1.25rem",
+      fontSize: "1.125rem",
       textTransform: "none",
       padding: "0 0.938rem",
       ...(icon && { width: btnHeight[height] }),

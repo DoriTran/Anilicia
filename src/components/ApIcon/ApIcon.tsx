@@ -25,13 +25,15 @@ const ApIcon: FC<ApIconProps> = ({
         color={color}
         fixedWidth={fixedWidth}
         {...restProps}
-        style={{ fontSize: size, ...restProps.style }}
+        style={{ fontSize: size, cursor: restProps.onClick ? "pointer" : "unset", ...restProps.style }}
       />
     );
   }
 
   const Icon = icon;
-  return <Icon sx={{ fontSize: size, color, ...sx }} {...restProps} />;
+  return (
+    <Icon sx={{ fontSize: size, cursor: restProps.onClick ? "pointer" : "unset", color, ...sx }} {...restProps} />
+  );
 };
 
 export default ApIcon;

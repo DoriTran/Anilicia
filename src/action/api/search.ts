@@ -10,15 +10,16 @@
 import { Anime, Pagination, SearchParams, Season, SeasonParams } from "../type/interface";
 import { http } from "./api";
 
-export async function getAnimeLatest(
+export async function getAnimeSearch(
   searchParams: SearchParams,
   page: number,
+  limit: number = 15,
 ): Promise<{ data: Anime[]; pagination: Pagination }> {
   const { data } = await http.get("/anime", {
     params: {
       ...searchParams,
       page,
-      limit: 15,
+      limit,
     },
   });
 
