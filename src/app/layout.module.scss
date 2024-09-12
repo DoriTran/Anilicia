@@ -4,8 +4,11 @@
   background-color: var(--primary-dark);
   position: relative;
   z-index: 0;
+  min-width: 100%;
 
   .rootScrollbar {
+    height: calc(100vh - $navbar);
     max-height: calc(100vh - $navbar);
+    position: relative;
   }
 }

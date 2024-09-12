@@ -2,7 +2,7 @@
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ApScrollbar, Navbar } from "@/components";
+import { ApScrollbar, Navbar, Sidebar } from "@/components";
 import styles from "./layout.module.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
@@ -25,7 +25,10 @@ export default function RootLayout({
         <QueryClientProvider client={queryClient}>
           <div className={styles.rootLayout}>
             <Navbar />
-            <ApScrollbar className={styles.rootScrollbar}>{children}</ApScrollbar>
+            <ApScrollbar className={styles.rootScrollbar}>
+              <Sidebar />
+              {children}
+            </ApScrollbar>
           </div>
         </QueryClientProvider>
       </body>

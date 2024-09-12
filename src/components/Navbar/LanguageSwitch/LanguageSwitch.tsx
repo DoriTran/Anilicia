@@ -1,14 +1,14 @@
 "use client";
 
 import clsx from "clsx";
-import { StoreGlobalType, useStoreGlobal } from "@/store";
+import { StoreLocalType, useStoreLocal } from "@/store";
 import { useShallow } from "zustand/react/shallow";
 import ApTooltip from "@/components/ApTooltip/ApTooltip";
 import styles from "./LanguageSwitch.module.scss";
 
 const LanguageSwitch = () => {
-  const { language, switchLanguage } = useStoreGlobal(
-    useShallow((state: StoreGlobalType) => ({ language: state.language, switchLanguage: state.switchLanguage })),
+  const { language, switchLanguage } = useStoreLocal(
+    useShallow((state: StoreLocalType) => ({ language: state.language, switchLanguage: state.switchLanguage })),
   );
 
   return (
@@ -19,7 +19,6 @@ const LanguageSwitch = () => {
         <div
           className={styles.indicator}
           style={{
-            width: !language ? "1px" : "50%",
             left: language === "EN" ? "0px" : "50%",
             borderRadius: language === "EN" ? "4px 0 0 4px" : "0 4px 4px 0",
           }}

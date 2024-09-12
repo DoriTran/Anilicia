@@ -46,7 +46,7 @@ const AppScrollbar: FC<AppScrollbarProps> = ({
       }}
       display={hidden ? "none" : "unset"}
       size={size}
-      color="var(--primary-light)"
+      color="var(--white)"
       {...restProps}
     >
       {children}

@@ -1,0 +1,36 @@
+@import "@/app/globals.scss";
+
+$ribbon: 3.75rem;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: $ribbon;
+
+  .decorateRibbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $ribbon;
+    height: $ribbon;
+    z-index: 2;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: $fontCurs;
+    font-size: $size28;
+    width: calc(100% - $ribbon + 0.8rem);
+    height: 2.7rem;
+    border: 5px solid var(--primary-dark);
+    background-color: var(--white);
+    color: var(--primary-dark);
+    border-radius: 10px;
+    z-index: 1;
+    @include flexRow;
+    cursor: pointer;
+    user-select: none;
+  }
+}

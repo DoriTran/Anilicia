@@ -11,3 +11,4 @@ export { default as ApTooltip } from "./ApTooltip/ApTooltip";
 
 // Layout components
 export { default as Navbar } from "./Navbar/Navbar";
+export { default as Sidebar } from "./Sidebar/Sidebar";

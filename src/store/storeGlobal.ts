@@ -1,23 +1,15 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
 
 export interface StoreGlobalType {
-  language: "EN" | "JP" | null;
-  switchLanguage: () => void;
+  isSidebarOpenned: boolean;
+  switchSidebar: () => void;
 }
 
-export const useStoreGlobal = create<StoreGlobalType, [["zustand/persist", unknown]]>(
-  persist(
-    (set) => ({
-      language: null,
+export const useStoreGlobal = create<StoreGlobalType>((set) => ({
+  isSidebarOpenned: false,
 
-      switchLanguage: () =>
-        set((state) => ({
-          language: state.language === "EN" ? "JP" : "EN",
-        })),
-    }),
-    {
-      name: "global",
-    },
-  ),
-);
+  switchSidebar: () =>
+    set((state) => ({
+      isSidebarOpenned: !state.isSidebarOpenned,
+    })),
+}));

@@ -19,11 +19,16 @@
       width: $sidebar;
 
       .logo {
-        transition: transform 0.5s ease-in-out;
+        transition: rotate 0.15s ease-in-out;
         margin: 0 10px 0 15px;
         width: 2.5rem;
         height: 2.5rem;
         cursor: pointer;
+        rotate: 0deg;
+      }
+
+      .logoNav {
+        rotate: 90deg;
       }
 
       .brand {

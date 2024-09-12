@@ -37,7 +37,6 @@ const ApButton: FC<ApButtonProps> = ({
 }) => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
-  console.log(buttonTheme[color].color);
   const btnProps = {
     ...(startIcon && {
       startIcon: <ApIcon icon={startIcon} size={iconProps?.size || "1.25rem"} {...iconProps} />,
