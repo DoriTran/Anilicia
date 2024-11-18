@@ -25,7 +25,11 @@ const ApIcon: FC<ApIconProps> = ({
         color={color}
         fixedWidth={fixedWidth}
         {...restProps}
-        style={{ fontSize: size, cursor: restProps.onClick ? "pointer" : "unset", ...restProps.style }}
+        style={{
+          ...(size && { fontSize: size }),
+          cursor: restProps.onClick ? "pointer" : "unset",
+          ...restProps.style,
+        }}
       />
     );
   }

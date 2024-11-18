@@ -4,6 +4,38 @@
   @include flexCol;
   justify-content: flex-start;
   width: 500px;
+  position: relative;
+
+  @media (max-width: $middle) {
+    width: 400px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 250px;
+  }
+
+  @media (max-width: 610px) {
+    width: 200px;
+  }
+
+  @media (max-width: $phone) {
+    width: 100%;
+    height: 40px;
+  }
+
+  .searchIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px !important;
+
+    @media (max-width: $phone) {
+      top: 7px;
+      left: unset;
+      right: 0px;
+      font-size: 25px !important;
+    }
+  }
 
   .searchBox {
     width: 100%;
@@ -12,7 +44,11 @@
     border: 2px solid var(--primary-dark);
     @include flexRow;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 10px 0 40px;
+
+    @media (max-width: $phone) {
+      display: none;
+    }
 
     .input {
       width: calc(100% - 5rem);
@@ -20,7 +56,7 @@
       border: none;
       background-color: transparent;
       color: var(--primary-dark);
-      font-size: $moderate;
+      font-size: $pxmoderate;
     }
 
     .input::placeholder {

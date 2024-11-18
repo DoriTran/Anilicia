@@ -31,7 +31,7 @@ const Navbar = () => {
           <SearchBox />
           <LanguageSwitch />
           <ApTooltip tooltip="Find random anime" divWrapper>
-            <ApButton color="dark" endIcon={faShuffle}>
+            <ApButton color="dark" endIcon={faShuffle} className={styles.randomBtn}>
               Random
             </ApButton>
           </ApTooltip>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
       <div className={styles.rightSide}>
         <div className={styles.loginText}>Log in</div>
-        <ApAvatar src="/common/default avatar.png" size="2.5rem" color="white" className={styles.avatar} />
+        <ApAvatar src="/common/default avatar.png" size="40px" color="white" className={styles.avatar} />
       </div>
     </div>
   );

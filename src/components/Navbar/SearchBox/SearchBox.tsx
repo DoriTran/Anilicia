@@ -16,17 +16,23 @@ const SearchBox = () => {
 
   return (
     <div className={styles.container}>
+      <ApIcon
+        icon={faMagnifyingGlass}
+        color="var(--primary-dark)"
+        // size="20px"
+        onClick
+        className={styles.searchIcon}
+      />
       <div className={styles.searchBox}>
-        <ApIcon icon={faMagnifyingGlass} color="var(--primary-dark)" size="1.25rem" onClick />
         <input
           className={styles.input}
           placeholder="Explore anime . . ."
           value={searchKey}
           onChange={(event) => setSearchKey(event.target.value)}
         />
-        <ApIcon icon={faCaretDown} color="var(--primary-dark)" size="1.25rem" onClick />
+        <ApIcon icon={faCaretDown} color="var(--primary-dark)" size="20px" onClick />
       </div>
-      <div className={styles.searchResult}>Result</div>
+      {/* <div className={styles.searchResult}>Result</div> */}
     </div>
   );
 };

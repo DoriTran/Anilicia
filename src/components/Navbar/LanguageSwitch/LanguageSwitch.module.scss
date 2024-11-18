@@ -4,9 +4,13 @@
   position: relative;
   width: 120px;
   height: 35px;
-  font-size: $moderate;
+  font-size: $pxmoderate;
   border-radius: 5px;
   border: 1px solid var(--primary-dark);
+
+  @media (max-width: 875px) {
+    display: none;
+  }
 
   .button {
     position: relative;
