@@ -4,6 +4,7 @@ import ApImage from "../ApImage/ApImage";
 import styles from "./Sidebar.module.scss";
 import InfoLink from "./InfoLink/InfoLink";
 import ActionButton from "./ActionButton/ActionButton";
+import AppScrollbar from "../ApScrollbar/ApScrollbar";
 
 const Sidebar = () => {
   const { isSidebarOpenned, switchSidebar } = useStoreGlobal(
@@ -19,7 +20,7 @@ const Sidebar = () => {
           onClick={() => switchSidebar()}
         />
       )}
-      <div className={styles.container} {...(isSidebarOpenned && { style: { left: 0 } })}>
+      <AppScrollbar className={styles.container} {...(isSidebarOpenned && { style: { left: 0 } })}>
         <div className={styles.staticWrapper}>
           <div className={styles.wrapper}>
             <ApImage src="/common/small-logo.png" alt="Anilicia logo" className={styles.logo} />
@@ -41,7 +42,7 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </AppScrollbar>
     </div>
   );
 };

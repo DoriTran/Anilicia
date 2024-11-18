@@ -1,7 +1,5 @@
 @import "@/app/globals.scss";
 
-$logo: 11rem;
-
 .sidebar {
   width: 100vw;
   height: calc(100vh - $navbar);
@@ -24,6 +22,7 @@ $logo: 11rem;
   .container {
     width: $sidebar;
     height: calc(100vh - $navbar);
+    max-height: calc(100vh - $navbar);
     transition: left 0.15s ease-in-out;
     background: linear-gradient(to right, var(--primary-dark), var(--primary));
     overflow: hidden;
@@ -46,15 +45,40 @@ $logo: 11rem;
         width: 100%;
         gap: 4vh;
 
+        @media (max-height: 640px) {
+          height: 80%;
+          justify-content: center;
+        }
+
         .logo {
-          width: $logo;
-          height: $logo;
+          width: 176px;
+          height: 176px;
+
+          @media (max-height: 720px) {
+            width: 160px;
+            height: 160px;
+          }
+
+          @media (max-height: 680px) {
+            width: 128px;
+            height: 128px;
+          }
+
+          @media (max-height: 640px) {
+            display: none;
+          }
         }
 
         .action {
           @include flexCol;
           gap: 4vh;
           width: 80%;
+          padding-bottom: 25px;
+
+          @media (max-height: 640px) {
+            height: 100%;
+            justify-content: center;
+          }
         }
       }
 
@@ -63,11 +87,12 @@ $logo: 11rem;
         align-items: flex-start;
         gap: 5px;
         width: 80%;
+        padding-bottom: 15px;
 
         .infoLink {
           @include flexRow;
           gap: 10px;
-          font-size: $medium;
+          font-size: $pxMidtxt;
           font-weight: $semibold;
           color: var(--white);
           cursor: pointer;

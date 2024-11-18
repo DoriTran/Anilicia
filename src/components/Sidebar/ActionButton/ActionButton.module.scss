@@ -1,6 +1,6 @@
 @import "@/app/globals.scss";
 
-$ribbon: 3.75rem;
+$ribbon: 60px;
 
 .container {
   position: relative;
@@ -21,9 +21,9 @@ $ribbon: 3.75rem;
     bottom: 0;
     right: 0;
     font-family: $fontCurs;
-    font-size: $size28;
+    font-size: $pxsize28;
     width: calc(100% - $ribbon + 0.8rem);
-    height: 2.7rem;
+    height: 43px;
     border: 5px solid var(--primary-dark);
     background-color: var(--white);
     color: var(--primary-dark);
